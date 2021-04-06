@@ -1,0 +1,12 @@
+service: service-mw2 # 应用发布到云平台的名字
+
+provider:
+  name: aliyun # 发布的云平台，aliyun，tencent 等
+
+deployType: midway # 部署的应用类型
+
+package:
+  include: 
+    - public # 如果有静态文件目录，写在这里会被自动拷贝
+  exclude:
+    - package-lock.json # 忽略 package-lock.json 文件
